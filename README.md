@@ -24,13 +24,11 @@
 
 社員番号とパスワードを入力してログインします。
 
-![ログイン画面](./images/login-screen.png)
+![ログイン画面](./images/ss.png)
 
 ### 勤怠管理画面
 
 ログイン後、出勤・退勤の登録と勤怠履歴の確認ができます。
-
-![勤怠管理画面](./images/attendance-screen.png)
 
 ## アプリケーションURL
 
@@ -40,7 +38,7 @@ https://attendance-management-app-pi.vercel.app
 
 ### テスト用アカウント
 
-社員番号　E001
+社員番号　E001  
 パスワード　password123
 
 ## 開発した背景
@@ -49,7 +47,7 @@ https://attendance-management-app-pi.vercel.app
 
 本アプリでは、社員がログインし、出勤・退勤を登録して、その履歴を確認するという勤怠管理の基本的な流れを実装しています。
 
-## 🖥️ 画面・機能の説明
+## 画面・機能の説明
 
 ### 1. ログイン機能
 
@@ -86,27 +84,27 @@ https://attendance-management-app-pi.vercel.app
 
 ### フロントエンド
 
-React  ユーザーインターフェースの構築
-Vite   Reactの開発環境・ビルド
-CSS    画面デザイン
+React  (ユーザーインターフェースの構築)  
+Vite   (Reactの開発環境・ビルド)  
+CSS    (画面デザイン)  
 
 ### バックエンド
 
-Java             バックエンドの実装
-Spring Boot      REST APIの構築
-Spring Data JPA  データベース操作
+Java             (バックエンドの実装)  
+Spring Boot      (REST APIの構築)  
+Spring Data JPA  (データベース操作)  
 
 ### データベース
 
-H2 Database  ローカル開発環境でのデータ保存
-PostgreSQL   公開環境で使用
+H2 Database  (ローカル開発環境でのデータ保存)  
+PostgreSQL   (公開環境で使用)  
 
 ### 開発・インフラ
 
-Git     バージョン管理
-GitHub  ソースコードの管理・公開
-Vercel  フロントエンドの公開予定
-Render  バックエンドの公開予定
+Git     (バージョン管理)  
+GitHub  (ソースコードの管理・公開)  
+Vercel  (フロントエンドの公開)  
+Render  (バックエンドの公開)  
 
 ---
 
@@ -114,4 +112,8 @@ Render  バックエンドの公開予定
 
 本アプリでは、社員情報を管理する `EMPLOYEES` テーブルと、勤怠情報を管理する `ATTENDANCE_RECORDS` テーブルを使用しています。
 
-<!-- ER図の画像を後からここに追加 -->
+![ER図](./images/ER.png)
+
+## システム構成図
+
+![システム構成図](./images/system.png)
