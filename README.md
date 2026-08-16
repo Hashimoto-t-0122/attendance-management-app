@@ -36,7 +36,7 @@
 
 ### 公開URL
 
-Vercelへのデプロイ完了後に記載予定です。
+https://attendance-management-app-pi.vercel.app
 
 ### テスト用アカウント
 
