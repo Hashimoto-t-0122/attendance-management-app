@@ -11,7 +11,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/employees")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://attendance-management-app-pi.vercel.app"
+})
 public class EmployeeController {
 
     private final EmployeeService employeeService;

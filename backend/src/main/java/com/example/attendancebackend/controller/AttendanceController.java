@@ -12,7 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/attendance")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://attendance-management-app-pi.vercel.app"
+})
 public class AttendanceController {
 
     private final AttendanceService attendanceService;
