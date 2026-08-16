@@ -12,9 +12,12 @@ import org.springframework.http.HttpStatus;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 
 @Service
 public class AttendanceService {
+
+    private static final ZoneId JAPAN_ZONE = ZoneId.of("Asia/Tokyo");
 
     private final AttendanceRepository attendanceRepository;
     private final EmployeeRepository employeeRepository;
@@ -38,7 +41,7 @@ public class AttendanceService {
                         )
                 );
 
-        LocalDate today = LocalDate.now();
+        LocalDate today = LocalDate.now(JAPAN_ZONE);
 
         boolean alreadyClockedIn = attendanceRepository
                 .findByEmployeeAndWorkDate(employee, today)
@@ -55,7 +58,7 @@ public class AttendanceService {
 
         record.setEmployee(employee);
         record.setWorkDate(today);
-        record.setClockInTime(LocalDateTime.now());
+        record.setClockInTime(LocalDateTime.now(JAPAN_ZONE));
 
         AttendanceRecord savedRecord = attendanceRepository.save(record);
 
@@ -78,7 +81,7 @@ public class AttendanceService {
                         )
                 );
 
-        LocalDate today = LocalDate.now();
+        LocalDate today = LocalDate.now(JAPAN_ZONE);
 
         AttendanceRecord record = attendanceRepository
                 .findByEmployeeAndWorkDate(employee, today)
@@ -96,7 +99,7 @@ public class AttendanceService {
             );
         }
 
-        record.setClockOutTime(LocalDateTime.now());
+        record.setClockOutTime(LocalDateTime.now(JAPAN_ZONE));
 
         AttendanceRecord savedRecord =
                 attendanceRepository.save(record);
